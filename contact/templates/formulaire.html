@@ -1,0 +1,9 @@
+<form method="post" action="{% url contact_index %}" name="contact-form" id="contact-form">
+		<h4>Pour toute question ou demande de devis, écrivez-nous :</h4>	
+	    {% csrf_token %}
+	
+		{{ form.as_p }}
+
+		<input type="hidden" name="backend_url" value="{{backend_url}}"/>
+</form>
+
